@@ -8,16 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="background-image"></div>
+    <header class="app-header">
+        <div class="logo">
+            <i class="fas fa-coins animated-icon"></i>
+            <h2>Currency Exchange</h2>
+        </div>
+    </header>
+
     <div class="container">
         <div class="converter-box">
             <h1><i class="fas fa-exchange-alt"></i> Conversor de Monedas</h1>
-            
+
             <div class="input-group">
                 <div class="amount-input">
                     <label for="amount">Cantidad:</label>
                     <input type="number" id="amount" placeholder="0.00" min="0" step="0.01">
                 </div>
-                
+
                 <div class="currency-select">
                     <label for="from-currency">De:</label>
                     <select id="from-currency">
@@ -27,6 +35,12 @@
                         <option value="GBP">GBP - Libra Esterlina</option>
                         <option value="JPY">JPY - Yen Japonés</option>
                         <option value="MXN">MXN - Peso Mexicano</option>
+                        <option value="CAD">CAD - Dólar Canadiense</option>
+                        <option value="AUD">AUD - Dólar Australiano</option>
+                        <option value="CHF">CHF - Franco Suizo</option>
+                        <option value="CNY">CNY - Yuan Chino</option>
+                        <option value="BRL">BRL - Real Brasileño</option>
+                        <option value="ARS">ARS - Peso Argentino</option>
                     </select>
                 </div>
 
@@ -43,18 +57,44 @@
                         <option value="GBP">GBP - Libra Esterlina</option>
                         <option value="JPY">JPY - Yen Japonés</option>
                         <option value="MXN">MXN - Peso Mexicano</option>
+                        <option value="CAD">CAD - Dólar Canadiense</option>
+                        <option value="AUD">AUD - Dólar Australiano</option>
+                        <option value="CHF">CHF - Franco Suizo</option>
+                        <option value="CNY">CNY - Yuan Chino</option>
+                        <option value="BRL">BRL - Real Brasileño</option>
+                        <option value="ARS">ARS - Peso Argentino</option>
                     </select>
                 </div>
             </div>
 
             <div class="result">
-                <p id="result-text">Resultado: <span id="converted-amount">0.00</span></p>
-                <p id="rate-text">Tasa de cambio: <span id="exchange-rate">1.00</span></p>
+                <div class="result-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Resultado de la Conversión</h3>
+                </div>
+                <div class="result-content">
+                    <p id="result-text">Resultado: <span id="converted-amount">0.00</span></p>
+                    <p id="rate-text">Tasa de cambio: <span id="exchange-rate">1.00</span></p>
+                </div>
             </div>
 
-            <button id="convert-btn" class="convert-btn">Convertir</button>
+            <button id="convert-btn" class="convert-btn">
+                <i class="fas fa-sync-alt"></i> Convertir
+            </button>
+        </div>
+
+        <div class="currency-info">
+            <div class="info-card">
+                <i class="fas fa-info-circle"></i>
+                <p>Los tipos de cambio se actualizan en tiempo real utilizando datos de <a href="https://exchangerate-api.com" target="_blank">ExchangeRate-API</a>.</p>
+            </div>
         </div>
     </div>
+
+    <footer class="app-footer">
+        <p>© 2025 Conversor de Monedas | Diseñado con <i class="fas fa-heart"></i></p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html> 
